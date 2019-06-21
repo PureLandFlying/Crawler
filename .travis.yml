@@ -6,6 +6,6 @@ php:
   - '7.3'
 services:
   - redis-server
-script: vendor/bin/simple-phpunit
+script: ./vendor/bin/simple-phpunit
 install:
    - composer install

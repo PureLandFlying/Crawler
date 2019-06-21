@@ -229,7 +229,7 @@ class CrawlerCommand extends Command
      */
     protected function createOneWorker()
     {
-        $process = Process::fromShellCommandline(sprintf("php bin/console app:product"));
+        $process = Process::fromShellCommandline(sprintf("php bin/console app:product  --ProductCount={$this->productCount}"));
         //$process->setPty(false);
 
         if ($this->timeout) {
