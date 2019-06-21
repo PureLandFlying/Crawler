@@ -2,7 +2,7 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": "^7.0.0",
+        "php": "^7.1.0",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "bentools/guzzle-queue-handler": "^0.2.0",
