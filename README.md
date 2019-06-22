@@ -19,5 +19,6 @@ php bin/console app:crawler --ProductWorkerCount=10 --ListWorkerCount=2 --ListPa
 
 ## Run tests, and generate the code coverage reporting
 ```bash
-vendor\bin\simple-phpunit.bat --coverage-html coverage
+vendor/bin/simple-phpunit --coverage-html coverage
 ```
+the reporting is generated in coverage folder
