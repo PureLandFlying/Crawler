@@ -220,7 +220,7 @@ class CrawlerCommand extends Command
 
         $filesystem->appendToFile(getcwd() . '/products.json', "]");
 
-        $message->success('Dumped ' . $i . ' Product(s)!');
+        $message->success('Dumped ' . $i . ' Product(s) into '. getcwd(). DIRECTORY_SEPARATOR . 'products.json');
 
     }
 

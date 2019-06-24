@@ -91,9 +91,7 @@ class ListPageCommand extends Command
     }
 
     /**
-     * job任务
-     *
-     * @throws \Doctrine\ORM\OptimisticLockException
+     * jobQuene
      */
     public function runJobQueue($pageCount, $workerCount)
     {
