@@ -70,9 +70,11 @@ class CrawlerCommandTest extends KernelTestCase
         );
         $output = $commandTester->getDisplay();
 
-        $this->assertContains(sprintf('[OK] Dumped %s Product(s)! ', $product_count), $output);
+        $this->assertContains(sprintf('[OK] Dumped %s Product(s) into', $product_count), $output);
 
 
+        // SCENARIO
+        //  1
         $commandTester = new CommandTester(self::$command);
         $product_count = 20;
         $this->assertEquals(
@@ -81,7 +83,7 @@ class CrawlerCommandTest extends KernelTestCase
         );
         $output = $commandTester->getDisplay();
 
-        $this->assertContains(sprintf('[OK] Dumped %s Product(s)! ', $product_count), $output);
+        $this->assertContains(sprintf('[OK] Dumped %s Product(s) into', $product_count), $output);
 
     }
 

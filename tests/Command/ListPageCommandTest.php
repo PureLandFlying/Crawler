@@ -136,7 +136,7 @@ class ListPageCommandTest extends KernelTestCase
         $product_count = 10;
         $this->assertEquals(
             ListPageCommand::EXITCODE,
-            $commandTester->execute(['--ProductCount' => $product_count, '--ListWorkerCount' => 6, '--ListPageCount' => 20])
+            $commandTester->execute(['--ProductCount' => $product_count, '--ListWorkerCount' => 6, '--ListPageCount' => 1])
         );
 
         $output = $commandTester->getDisplay();
