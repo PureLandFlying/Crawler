@@ -134,8 +134,6 @@ class ProductPageCommand extends Command
     }
 
     /**
-     * 爬取得到所有的站内链接
-     *
      * @param Job $job
      * @return array
      * @throws \Exception
