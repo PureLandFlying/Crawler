@@ -27,7 +27,7 @@ the reporting is generated in coverage folder
 ~~~bash
 git clone https://github.com/PureLandFlying/Crawler.git
 cd Crawler
-echo "REDIS_URL=redis://redis" >> .env.test 
+change REDIS_URL=redis://localhost to REDIS_URL=redis://redis in .env file
 docker-compose -f docker\docker-compose.yml build
 docker-compose -f docker\docker-compose.yml up
 ~~~
