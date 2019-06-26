@@ -22,3 +22,18 @@ php bin/console app:crawler --ProductWorkerCount=10 --ListWorkerCount=2 --ListPa
 vendor/bin/simple-phpunit --coverage-html coverage
 ```
 the reporting is generated in coverage folder
+
+## Docker (Recommended)
+~~~bash
+git clone https://github.com/PureLandFlying/Crawler.git
+cd Crawler
+echo "REDIS_URL=redis://redis" >> .env.test 
+docker-compose -f docker\docker-compose.yml build
+docker-compose -f docker\docker-compose.yml up
+~~~
+It will generate two items in Crawler folder:
+~~~
+- products.json (file)
+- coverage (folder)
+~~~
+coverage is the test coverage reporting

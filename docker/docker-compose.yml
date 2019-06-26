@@ -1,0 +1,32 @@
+version: "3.4"
+
+services:
+  redis:
+    image: redis:4.0.8-alpine
+    #networks:
+    #  - servicenet
+    ports:
+      - target: 6379
+        published: 6379
+        protocol: tcp
+        mode: ingress
+    volumes:
+      - "../redis:/data"
+    deploy:
+      replicas: 1
+
+  php-cli:
+    build:
+      context: .
+      dockerfile: phpcli/Dockerfile
+    image: php:7.3-cli
+    volumes:
+      - "../:/data/crawler"
+    links:
+      - redis
+    tty: true
+    command: >
+      sh -c "cd /data/crawler && 
+      composer install && 
+      vendor/bin/simple-phpunit --coverage-html coverage &&
+      php bin/console app:crawler --ProductWorkerCount=10 --ListWorkerCount=3 --ListPageCount=5 --ProductCount=100"
