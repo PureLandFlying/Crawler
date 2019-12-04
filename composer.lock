@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2271a8d77743f27e5b4fedc6c1868f0",
+    "content-hash": "82f1c5328911c9049bdf3101d96c48d7",
     "packages": [
         {
             "name": "bentools/guzzle-queue-handler",
@@ -2655,7 +2655,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.0",
+        "php": "^7.2.0",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
