@@ -17,6 +17,9 @@
     "guzzlehttp/psr7": {
         "version": "1.5.2"
     },
+    "php": {
+        "version": "7.2"
+    },
     "predis/predis": {
         "version": "v1.1.1"
     },
